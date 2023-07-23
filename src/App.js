@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMedium } from '@fortawesome/free-brands-svg-icons'
+import { faMedium, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 function App() {
 
@@ -37,35 +37,36 @@ function App() {
             <h3>CONTACT</h3>
             <div className='contact-icons'>
               <a href='https://www.linkedin.com/in/tobychitty/' target='blank'>
-                <i className="devicon-linkedin-plain contact-icon" onMouseEnter={() => setContactText("LinkedIn")} onMouseLeave={() => setContactText("")}></i>
+                <FontAwesomeIcon icon={faLinkedinIn} className='contact-icon' onMouseEnter={() => setContactText("LinkedIn")} onMouseLeave={() => setContactText("")}/>
               </a>
-              <i className="devicon-github-original contact-icon" onMouseEnter={() => setContactText("GitHub")} onMouseLeave={() => setContactText("")}></i>
-              <FontAwesomeIcon icon={faMedium} className='contact-icon' onMouseEnter={() => setContactText("Medium")} onMouseLeave={() => setContactText("")}/>
-              <i className="devicon-twitter-original contact-icon" onMouseEnter={() => setContactText("Twitter")} onMouseLeave={() => setContactText("")}></i>
+              <a href='https://github.com/Tobychitty' target='blank'>
+                <FontAwesomeIcon icon={faGithub} className='contact-icon' onMouseEnter={() => setContactText("GitHub")} onMouseLeave={() => setContactText("")}/>
+              </a>
+              <a href='https://medium.com/@tobychitty' target='blank'>
+                <FontAwesomeIcon icon={faMedium} className='contact-icon' onMouseEnter={() => setContactText("Medium")} onMouseLeave={() => setContactText("")}/>
+              </a>
             </div>
             <p id='hover-text'>{contactText}</p>
           </div>
         </div>
         <div className='main-right'>
+          <p id='projects-title' style={{marginBottom: '10px', fontSize: '14px', fontWeight: 600}}>PROJECTS</p>
           <div id='project-grid'>
             <div id='project-1' className='project'>
-              <div id='bg-box-hollow' className='bg-box'></div>
+
             </div>
             <div id='project-2' className='project'>
-              <div id='bg-box-full' className='bg-box'></div>
+
             </div>
             <div id='project-3' className='project'>
-              <div id='bg-box-full' className='bg-box'></div>
+
             </div>
             <div id='project-4' className='project'>
-              <div id='bg-box-hollow' className='bg-box'></div>
+
             </div>
           </div>
         </div>
       </main>
-      <section>
-
-      </section>
     </div>
   );
 }
